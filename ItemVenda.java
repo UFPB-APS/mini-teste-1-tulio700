@@ -3,6 +3,10 @@ public class ItemVenda {
     private double quantidade;
     private Produto produto;
     
+    protected double getSubTotal() {
+        return this.getQuantidade() * this.getProduto().getPreco();
+    }
+    
     public void setQuantidade(double quantidade) {
         this.quantidade = quantidade;
     }

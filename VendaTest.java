@@ -58,9 +58,27 @@ public class VendaTest
         itemVend2.setQuantidade(1);
         venda1.addNoCarrinho(itemVend2, 1);
 
-        assertEquals(2500, venda1.getTotal(), 0.1);
+        assertEquals(2625, venda1.calcularTotal(), 0.1);
+    }
+
+    @Test
+    public void vendaComSeguro()
+    {
+        Seguro seguro1 = new Seguro("Porto Seguro", 0.02);
+        Seguro seguro2 = new Seguro("Mapfre", 0.015);
+        Venda venda1 = new Venda();
+        venda1.setSeguro(seguro1);
+        Produto produto1 = new Produto(1, "Banana", 0.1);
+        ItemVenda itemVend1 = new ItemVenda();
+        itemVend1.setProduto(produto1);
+        itemVend1.setQuantidade(100);
+        venda1.addNoCarrinho(itemVend1, 0);
+        assertEquals(10.71, venda1.calcularTotal(), 0.1);
+        venda1.setSeguro(seguro2);
+        assertEquals(10.66, venda1.calcularTotal(), 0.1);
     }
 }
+
 
 
 
