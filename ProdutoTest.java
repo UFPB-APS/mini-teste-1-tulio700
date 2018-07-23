@@ -45,7 +45,7 @@ public class ProdutoTest
     {
         Produto produto2 = new ProdutoAmazon(1, "Pastel", 10.00);
         produto2.reajustarPreco(10.0);
-        assertEquals(11.0, produto2.getPreco(), 0.1);
+        assertEquals(11.0, produto2.getPrecoReferencia(), 0.1);
     }
 
     @Test
@@ -53,7 +53,7 @@ public class ProdutoTest
     {
         ProdutoAmazon produto1 = new ProdutoAmazon(2, "abc", 5.50);
         produto1.reajustarPreco(20);
-        assertEquals(6.6, produto1.getPreco(), 0.1);
+        assertEquals(6.6, produto1.getPrecoReferencia(), 0.1);
     }
 
 
@@ -62,7 +62,7 @@ public class ProdutoTest
     {
         ProdutoAmazon produto1 = new ProdutoAmazon(4, "Chocolate", 3);
         produto1.reajustarPreco(-50);
-        assertEquals(3.0, produto1.getPreco(), 0.1);
+        assertEquals(3.0, produto1.getPrecoReferencia(), 0.1);
     }
 }
 

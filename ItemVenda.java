@@ -2,9 +2,10 @@ public class ItemVenda {
 
     private double quantidade;
     private Produto produto;
+    private double precoVenda;
     
     protected double getSubTotal() {
-        return this.getQuantidade() * this.getProduto().getPreco();
+        return this.getQuantidade() * this.getPrecoVenda();
     }
     
     public void setQuantidade(double quantidade) {
@@ -14,8 +15,17 @@ public class ItemVenda {
     public double getQuantidade() {
         return quantidade;
     }
+
+    public void setPrecoVenda(double precoVenda) {
+        this.precoVenda = precoVenda;
+    }
     
+    public double getPrecoVenda() {
+        return precoVenda;
+    }
+
     public void setProduto(Produto produto) {
+        setPrecoVenda(produto.getPrecoReferencia());
         this.produto = produto;
     }
     

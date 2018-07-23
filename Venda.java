@@ -2,21 +2,19 @@ public class Venda {
 
     private String data;
     private ItemVenda[] itens = new ItemVenda[10];
-    private Custo iv = new ImpostoSobreVenda();
-    private Custo seguro;
     private String estadoDoCliente;
     private double total;
+    
+    public ItemVenda[] getItens() {
+        return this.itens;
+    }
     
     private void setEstadoDoCliente(String estadoDoCliente) {
         this.estadoDoCliente = estadoDoCliente;
     }
-    
-    public Custo getSeguro() {
-        return seguro;
-    }
-    
-    public void setSeguro(Custo seguro) {
-        this.seguro = seguro;
+        
+    public String getEstadoDoCliente() {
+        return estadoDoCliente;
     }
     
     public void setData(String data) {
@@ -35,28 +33,9 @@ public class Venda {
         return total;
     }
     
-    public double calcularTotal() {
-        total = 0.0;
-        for (ItemVenda item: this.itens) {
-            if (item != null) {
-                total += item.getSubTotal();
-            }
-        }
-        
-        if ( this.iv != null) {
-            total += this.iv.calcularCusto(this);
-        }
-        
-        if ( this.seguro != null) {
-            total += this.seguro.calcularCusto(this);
-        }
-        
-        return total;
+    public void setTotal(double total) {
+        this.total = total;
     }
-    public String getEstadoDoCliente() {
-        return estadoDoCliente;
-    }
-    
     
     
     

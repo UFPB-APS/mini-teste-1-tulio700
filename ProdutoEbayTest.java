@@ -46,7 +46,7 @@ public class ProdutoEbayTest
     {
         Produto produto2 = new Produto(1, "Pastel", 10.00);
         produto2.reajustarPreco(10.0);
-        assertEquals(11.0, produto2.getPreco(), 0.1);
+        assertEquals(11.0, produto2.getPrecoReferencia(), 0.1);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class ProdutoEbayTest
     {
         Produto produto1 = new Produto(2, "abc", 5.50);
         produto1.reajustarPreco(20);
-        assertEquals(6.6, produto1.getPreco(), 0.1);
+        assertEquals(6.6, produto1.getPrecoReferencia(), 0.1);
     }
 
 
@@ -63,6 +63,6 @@ public class ProdutoEbayTest
     {
         Produto produto1 = new Produto(4, "Chocolate", 3);
         produto1.reajustarPreco(-50);
-        assertEquals(1.5, produto1.getPreco(), 0.1);
+        assertEquals(1.5, produto1.getPrecoReferencia(), 0.1);
     }
 }

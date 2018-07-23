@@ -2,14 +2,14 @@ public class Produto {
 
     private int id;
     private String descricao;
-    private double preco;
+    private double precoReferencia;
     
     public Produto() { }
     
-    public Produto(int id, String descricao, double preco) {
+    public Produto(int id, String descricao, double precoReferencia) {
         this.id = id;
         this.descricao = descricao;
-        this.preco = preco;
+        this.precoReferencia = precoReferencia;
     }
     
     public void setId(int id) {
@@ -28,17 +28,17 @@ public class Produto {
         return descricao;
     }
     
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public void setPrecoReferencia(double precoReferencia) {
+        this.precoReferencia = precoReferencia;
     }
     
-    public double getPreco() {
-        return preco;
+    public double getPrecoReferencia() {
+        return precoReferencia;
     }
     
     public void reajustarPreco(double percentual) {
-        double reajuste = getPreco() * (percentual / 100);
-        setPreco(getPreco() + reajuste);
+        double reajuste = getPrecoReferencia() * (percentual / 100);
+        setPrecoReferencia(getPrecoReferencia() + reajuste);
     }
 
 }
