@@ -32,5 +32,8 @@ public class ItemVenda {
     public Produto getProduto() {
         return produto;
     }
+    public String getNome(){
+        return this.getProduto().getDescricao();
+    }
     
 }

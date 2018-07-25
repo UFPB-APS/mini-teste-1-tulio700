@@ -8,7 +8,6 @@ public class Venda {
     public ItemVenda[] getItens() {
         return this.itens;
     }
-    
     private void setEstadoDoCliente(String estadoDoCliente) {
         this.estadoDoCliente = estadoDoCliente;
     }

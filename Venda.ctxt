@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ItemVenda[]\ getItens()
+comment1.params=estadoDoCliente
+comment1.target=void\ setEstadoDoCliente(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getEstadoDoCliente()
+comment3.params=data
+comment3.target=void\ setData(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getData()
+comment5.params=item\ posicao
+comment5.target=void\ addNoCarrinho(ItemVenda,\ int)
+comment6.params=
+comment6.target=double\ getTotal()
+comment7.params=total
+comment7.target=void\ setTotal(double)
+numComments=8
